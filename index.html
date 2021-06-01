@@ -17,108 +17,111 @@
 <body>
     <div class="container d-flex align-items-center justify-content-center  my-3">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 my-2">
                 <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-title">Payment form example</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="row g-3">
-                            <div class="alert alert-danger" role="alert">
-                                Some fields are missing
-                            </div>
-                            <div class="col-5 p-2">
-                                <label for="" class="form-label">Card #</label>
-                                <input type="number" class="form-control" placeholder="XXXXXXXXXXXX">
-                            </div>
-                            <div class="col-3 p-2">
-                                <label for="" class="form-label">CVC #</label>
-                                <input type="number" class="form-control" placeholder="0000">
-                            </div>
-                            <div class="col-4 p-2">
-                                <label for="" class="form-label">Amount</label>
-                                <div class="d-flex align-items-center">
-                                    <strong>$</strong><input type="text" name="amount" class="form-control"
-                                        placeholder="Amount">
+                    <form class="mt-0" id="payment_form">
+                        <div class="card-header">
+                            <h3 class="card-title">Payment form example</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="alert alert-danger" role="alert">
+                                    Some fields are missing
                                 </div>
-                            </div>
-                            <div class="col-6 p-2">
-                                <label for="" class="form-label">First Name</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-6 p-2">
-                                <label for="" class="form-label">Last Name</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-6 p-2">
-                                <label for="" class="form-label">City</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-3 p-2">
-                                <label for="" class="form-label">State</label>
-                                <select class="form-select" name="" id="">
-                                    <option value="">Pick a state</option>
-                                </select>
-                            </div>
-                            <div class="col-3 p-2">
-                                <label for="" class="form-label">Postal code</label>
-                                <input type="number" class="form-control">
-                            </div>
-                            <div class="col-6">
-                                <label for="" class="form-label">We accept:</label>
+                                <div class="col-5 p-2">
+                                    <label for="" class="form-label">Card #</label>
+                                    <input type="number" id="number_card" class="form-control" placeholder="XXXXXXXXXXXX">
+                                </div>
+                                <div class="col-3 p-2">
+                                    <label for="" class="form-label">CVC #</label>
+                                    <input type="number" class="form-control" placeholder="0000">
+                                </div>
+                                <div class="col-4 p-2">
+                                    <label for="" class="form-label">Amount</label>
+                                    <div class="d-flex align-items-center">
+                                        <strong>$</strong><input type="text" name="amount" class="form-control"
+                                            placeholder="Amount">
+                                    </div>
+                                </div>
+                                <div class="col-6 p-2">
+                                    <label for="" class="form-label">First Name</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-6 p-2">
+                                    <label for="" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-6 p-2">
+                                    <label for="" class="form-label">City</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-3 p-2">
+                                    <label for="" class="form-label">State</label>
+                                    <select class="form-select" name="" id="">
+                                        <option value="">Pick a state</option>
+                                    </select>
+                                </div>
+                                <div class="col-3 p-2">
+                                    <label for="" class="form-label">Postal code</label>
+                                    <input type="number" class="form-control">
+                                </div>
                                 <div class="col-6">
-                                   <div class="bg-secondary payment-method ">
-                                    <div class="form-check form-check-inline">
-                                        <i></i>
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                            id="inlineRadio1" value="option1">
-                                        <label class="form-check-label" for="inlineRadio1"><i
-                                                class="fab fa-cc-mastercard"></i></label>
+                                    <label for="" class="form-label">We accept:</label>
+                                    <div class="col-6">
+                                        <div class="bg-secondary payment-method ">
+                                            <div class="form-check form-check-inline">
+                                                <i></i>
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                    id="inlineRadio1" value="option1">
+                                                <label class="form-check-label" for="inlineRadio1"><i
+                                                        class="fab fa-cc-mastercard"></i></label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                    id="" value="">
+                                                <label class="form-check-label" for="inlineRadio2"><i
+                                                        class="fab fa-cc-visa"></i></label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                    id="" value="">
+                                                <label class="form-check-label" for="inlineRadio3"><i
+                                                        class="fab fa-cc-diners-club"></i></label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                    id="" value="">
+                                                <label class="form-check-label" for="inlineRadio3"><i
+                                                        class="fab fa-cc-amex"></i>
+                                                </label>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id=""
-                                            value="">
-                                        <label class="form-check-label" for="inlineRadio2"><i
-                                                class="fab fa-cc-visa"></i></label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id=""
-                                            value="">
-                                        <label class="form-check-label" for="inlineRadio3"><i
-                                                class="fab fa-cc-diners-club"></i></label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id=""
-                                            value="">
-                                        <label class="form-check-label" for="inlineRadio3"><i
-                                                class="fab fa-cc-amex"></i>
-                                        </label>
-                                    </div>
-                                </div> 
+
+
                                 </div>
-                                
+                                <div class="col-6 p-2">
+                                    <label for="" class="form-label">Message</label>
+                                    <textarea class="form-control" id="" rows="3">
 
+                                    </textarea>
+                                    <div id="" class="form-text">Add notes here.</div>
+                                </div>
                             </div>
-                            <div class="col-6 p-2">
-                                <label for="" class="form-label">Message</label>
-                                <textarea class="form-control" id="" rows="3">
 
-                                </textarea>
-                                <div id="" class="form-text">Add notes here.</div>
+                        </div>
+                        <div class="card-footer d-flex justify-content-end col-12">
+                            <div class="d-grid gap-2 d-md-block">
+                                <button class="btn btn-secondary" type="button" id="cancel">cancel</button>
+                                <button class="btn btn-primary" type="submit" id="send">send</button>
                             </div>
                         </div>
-
-                    </div>
-                    <div class="card-footer d-flex justify-content-end col-12">
-                        <div class="d-grid gap-2 d-md-block">
-                            <button class="btn btn-secondary" type="button">cancel</button>
-                            <button class="btn btn-primary" type="button">send</button>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+    <script src="./main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
         crossorigin="anonymous"></script>
