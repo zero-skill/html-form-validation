@@ -11,6 +11,7 @@ payment_form.addEventListener('submit', function (event) {
   validateFirstName();
   validateLastName();
   validateCity();
+  validateAmount();
   //validateState();
   //validatePostalCode();
 });
@@ -31,6 +32,14 @@ function validateCVC() {
     alert("Error, el CVC está vacio");
   } else if (!regex_cvc.test(number_cvc.value.trim())) {
     alert("Error, el CVC no coincide con el formato");
+  }
+}
+function validateAmount() {
+  let number_amount = document.querySelector("#number_amount");
+  if (number_amount.value <=0) {
+    alert("Error, el campo amount debe ser mayor a 0");
+  }else if (/^[0-9]*$/.test(number_amount.value) == false) {
+    alert("Error, el campo amount debe ser numerico");
   }
 }
 function validateTypeCard() {
