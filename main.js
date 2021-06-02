@@ -9,7 +9,7 @@ payment_form.addEventListener('submit', function (event) {
   validateTypeCard();
   validateCVC();
   validateFirstName();
- // validateLastName();
+  validateLastName();
   //validateState();
   //validatePostalCode();
 });
