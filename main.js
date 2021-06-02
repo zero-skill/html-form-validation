@@ -12,8 +12,8 @@ payment_form.addEventListener('submit', function (event) {
   validateLastName();
   validateCity();
   validateAmount();
-  //validateState();
-  //validatePostalCode();
+  validateState();
+  validatePostalCode();
 });
 
 function validateCard() {
@@ -36,9 +36,9 @@ function validateCVC() {
 }
 function validateAmount() {
   let number_amount = document.querySelector("#number_amount");
-  if (number_amount.value <=0) {
+  if (number_amount.value <= 0) {
     alert("Error, el campo amount debe ser mayor a 0");
-  }else if (/^[0-9]*$/.test(number_amount.value) == false) {
+  } else if (/^[0-9]*$/.test(number_amount.value) == false) {
     alert("Error, el campo amount debe ser numerico");
   }
 }
@@ -89,19 +89,30 @@ function validateLastName() {
     alert("Error, el Last name contiene numeros.");
   }
 }
-function validateCity(){
-let txt_city = document.querySelector("#txt_city");
-if (txt_city.value.trim() === '') {
-  alert("Error, el campo city está vacio.");
-} else if (txt_city.value.trim().length < 3) {
-  alert("Error, el campo city debe ser minimo 3 caracteres.");
-} else if (/^[a-zA-Z]*$/.test(txt_city.value.trim()) == false) {
-  alert("Error, el campo city contiene numeros.");
+function validateCity() {
+  let txt_city = document.querySelector("#txt_city");
+  if (txt_city.value.trim() === '') {
+    alert("Error, el campo city está vacio.");
+  } else if (txt_city.value.trim().length < 3) {
+    alert("Error, el campo city debe ser minimo 3 caracteres.");
+  } else if (/^[a-zA-Z]*$/.test(txt_city.value.trim()) == false) {
+    alert("Error, el campo city contiene numeros.");
+  }
 }
+function validateState() {
+  let slc_state = document.querySelector("#slc_state");
+  let opt_state = document.getElementsByTagName("option")[slc_state.selectedIndex].value;
+  if (opt_state == '0') {
+    alert("Error, debe seleccionar una opcion en el campo State");
+  }
 }
-function validateState(){
-
-}
-function validatePostalCode(){
-
+function validatePostalCode() {
+  let txt_postal_code = document.querySelector("#txt_postal_code");
+  if (txt_postal_code.value.trim() === '') {
+    alert("Error, el campo Postal Code está vacio.");
+  } else if (txt_postal_code.value.trim().length < 2) {
+    alert("Error, el campo Postal Code debe ser minimo 2 caracteres.");
+  } else if (/^[a-zA-Z0-9\-]*$/.test(txt_postal_code.value.trim()) == false) {
+    alert("Error, el campo Postal Code contiene caracteres no permitidos.");
+  }
 }
