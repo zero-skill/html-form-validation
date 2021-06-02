@@ -10,6 +10,7 @@ payment_form.addEventListener('submit', function (event) {
   validateCVC();
   validateFirstName();
   validateLastName();
+  validateCity();
   //validateState();
   //validatePostalCode();
 });
@@ -80,7 +81,14 @@ function validateLastName() {
   }
 }
 function validateCity(){
-
+let txt_city = document.querySelector("#txt_city");
+if (txt_city.value.trim() === '') {
+  alert("Error, el campo city está vacio.");
+} else if (txt_city.value.trim().length < 3) {
+  alert("Error, el campo city debe ser minimo 3 caracteres.");
+} else if (/^[a-zA-Z]*$/.test(txt_city.value.trim()) == false) {
+  alert("Error, el campo city contiene numeros.");
+}
 }
 function validateState(){
 
